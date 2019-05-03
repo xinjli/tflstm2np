@@ -77,11 +77,11 @@ class TestInference(unittest.TestCase):
 
         np_fw_vals, np_bw_vals = bidirectional_dynamic_rnn(np.array(test_case), fw, fb, bw, bb)
 
-        print("tensorflow inference")
-        print(tf_fw_vals)
-
-        print("numpy inference")
-        print(np_fw_vals)
+        # print("tensorflow inference")
+        # print(tf_fw_vals)
+        #
+        # print("numpy inference")
+        # print(np_fw_vals)
 
         assert tf_fw_vals.shape == np_fw_vals.shape
         assert tf_bw_vals.shape == np_bw_vals.shape

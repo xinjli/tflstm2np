@@ -39,8 +39,10 @@ def dynamic_rnn(input_tensors, kernel, bias):
     :return: hidden tensors, cell state tensors
     """
 
-    prev_hidden = np.zeros(2)
-    prev_cell_state = np.zeros(2)
+    hidden_size = int(bias.shape[0]/4)
+
+    prev_hidden = np.zeros(hidden_size)
+    prev_cell_state = np.zeros(hidden_size)
 
     hidden_lst = []
     cell_state_lst = []
